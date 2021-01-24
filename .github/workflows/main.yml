@@ -16,3 +16,8 @@ jobs:
       - run: npm install -g yarn
       - run: yarn
       - run: yarn build
+      - uses: akhileshns/heroku-deploy@v3.8.9
+        with:
+          heroku-api-key: ${{secrets.HEROKU_API_TOKEN}}
+          heroku-app-name: "gh-action-test"
+          heroku-email: "ac380012@gmail.com"
